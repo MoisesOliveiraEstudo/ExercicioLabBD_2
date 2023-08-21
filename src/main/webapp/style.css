@@ -1,0 +1,18 @@
+@charset "ISO-8859-1";
+
+body{
+	font-family: sans-serif;
+}
+
+nav{
+	display: flex;
+	
+}
+
+div{
+	margin-bottom: 20px;
+}
+
+.container{
+	text-align: center;
+}
