@@ -36,6 +36,10 @@
 				</c:forEach>
 			</select>
 		</div>
+		<div>
+			<label>Hora de Saida</label>
+			<input type="number" name="hora_saida">
+		</div>
 		<input type="submit">
 	</form>
 </body>

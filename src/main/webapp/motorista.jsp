@@ -14,7 +14,7 @@
 		<a href="<%=request.getContextPath()%>/index.jsp">Voltar ao Inicio</a>
 	</nav>
 
-	<form method="POST">
+	<form action="cadastro/motorista" method="POST">
 		<div>
 			<label for="codigo">Codigo</label>
 			<input type="number" name="codigo" id="codigo">
@@ -37,6 +37,12 @@
 	<div>
 		<c:out value="${motorista.nome}"></c:out>
 		<c:out value="${erro}"></c:out>
+	</div>
+	
+	<div>
+		<c:forEach var="motorista" items="${motoristas}">
+			<label><c:out value="${motorista.nome }"></c:out></label>
+		</c:forEach>
 	</div>
 	
 </body>

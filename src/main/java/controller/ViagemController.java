@@ -53,26 +53,26 @@ public class ViagemController extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String comando = request.getParameter("botao");
-		String placa = request.getParameter("onibus");
-		int motoristaCodigo = Integer.parseInt(request.getParameter("motorista"));
-		Onibus onibus = new Onibus();
-		Motorista motorista = new Motorista();
-		
-		if(comando.contains("Inserir")) {
-			onibus.setPlaca(placa);
-			motorista.setCodigo();
-			onibus.setAno(ano);
-			onibus.setDescricao(descricao);
-			try {
-				DAO.inserir(onibus);
-			} catch (ClassNotFoundException | SQLException e) {
-				request.setAttribute("erro", e.getMessage());
-				RequestDispatcher dispatcher = request.getRequestDispatcher("/onibus.jsp");
-				dispatcher.forward(request, response);
-			}
-		}
-	System.out.println(onibus);
+//		String comando = request.getParameter("botao");
+//		String placa = request.getParameter("onibus");
+//		int motoristaCodigo = Integer.parseInt(request.getParameter("motorista"));
+//		Onibus onibus = new Onibus();
+//		Motorista motorista = new Motorista();
+//		
+//		if(comando.contains("Inserir")) {
+//			onibus.setPlaca(placa);
+////			motorista.setCodigo();
+////			onibus.setAno(ano);
+////			onibus.setDescricao(descricao);
+//			try {
+////				DAO.inserir(onibus);
+//			} catch (ClassNotFoundException | SQLException e) {
+//				request.setAttribute("erro", e.getMessage());
+//				RequestDispatcher dispatcher = request.getRequestDispatcher("/onibus.jsp");
+//				dispatcher.forward(request, response);
+//			}
+//		}
+//	System.out.println(onibus);
 	}
 
 }

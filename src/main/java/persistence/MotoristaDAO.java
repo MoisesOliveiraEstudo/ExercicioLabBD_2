@@ -18,7 +18,7 @@ public class MotoristaDAO implements DAO<Motorista>{
 	@Override
 	public void inserir(Motorista motorista) throws SQLException, ClassNotFoundException {
 		connection = DBConnection.connect();
-		PreparedStatement statement = connection.prepareStatement("INSERT INTO motorista(codigo,nome,naturalidade)"
+		PreparedStatement statement = connection.prepareStatement("INSERT INTO motorista (codigo,nome,naturalidade)"
 				+ " VALUES (?,?,?)");
 		statement.setInt(1, motorista.getCodigo());
 		statement.setString(2, motorista.getNome());

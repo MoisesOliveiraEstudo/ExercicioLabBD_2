@@ -47,7 +47,7 @@ public class MotoristaController extends HttpServlet {
 				DAO.inserir(motorista);
 			} catch (ClassNotFoundException | SQLException e) {
 				request.setAttribute("erro", e.getMessage());
-				RequestDispatcher dispatcher = request.getRequestDispatcher("motorista.jsp");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/onibus.jsp");
 				dispatcher.forward(request, response);
 			}
 		}
@@ -90,7 +90,22 @@ public class MotoristaController extends HttpServlet {
 				dispatcher.forward(request, response);
 			}
 		}
-		
+		if(comando.contains("Listar")) {
+			try {
+				motoristas = DAO.consultarTodos();
+				request.setAttribute("motoristas", motoristas);
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/motorista.jsp");
+				dispatcher.forward(request, response);
+			} 
+			catch (Exception e) {
+				request.setAttribute("erro", e.getMessage());
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/motorista.jsp");
+				dispatcher.forward(request, response);
+			}
+			finally {
+				
+			}
+		}
 		
 	}
 

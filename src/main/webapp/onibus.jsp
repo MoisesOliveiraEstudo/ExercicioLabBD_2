@@ -9,6 +9,10 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/style.css">
 </head>
 <body>
+	<nav>
+		<a href="<%=request.getContextPath()%>/index.jsp">Voltar ao Inicio</a>
+	</nav>
+
 	<form action="cadastro/onibus" method="POST">
 		<div>
 			<label for="codigo">Placa</label>
